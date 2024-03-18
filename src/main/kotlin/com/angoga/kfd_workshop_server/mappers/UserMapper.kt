@@ -22,7 +22,6 @@ class UserMapper {
     fun asResponse(entity: User): UserResponse {
         return UserResponse(
             id = entity.id,
-            createdAt = entity.createdAt,
             email = entity.email,
             name = entity.name
         )

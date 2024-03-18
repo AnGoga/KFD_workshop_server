@@ -13,4 +13,4 @@ class Like(
     @OneToOne
     @JoinColumn(name = "publicationId")
     var publication: Publication
-) : AbstractCreatedAtEntity()
+) : AbstractEntity()

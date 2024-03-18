@@ -12,7 +12,7 @@ import jakarta.persistence.Table
 class Commentary(
     @Column(name = "content", nullable = false)
     var content: String
-) : AbstractCreatedAtEntity() {
+) : AbstractEntity() {
     @OneToOne
     @JoinColumn(name = "userId")
     lateinit var user: User

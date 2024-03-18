@@ -27,7 +27,6 @@ class PublicationMapper(
     fun asResponse(entity: Publication): PublicationResponse {
         return PublicationResponse(
             id = entity.id,
-            createdAt = entity.createdAt,
             title = entity.title,
             content = entity.content,
             isLiked = likeDao.existsByUserIdAndPublication(getPrincipal(), entity),

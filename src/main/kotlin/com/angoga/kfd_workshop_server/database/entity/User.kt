@@ -14,7 +14,7 @@ class User(
     @Column(name = "name", nullable = false)
     var name: String,
 
-) : AbstractCreatedAtEntity() {
+) : AbstractEntity() {
     @Column(name = "hash", nullable = false)
     var hash: String? = null
 }
