@@ -11,9 +11,4 @@ class PageRequest(
     @RequestParam var field: String = "id",
 ) {
     var pageable = PageRequest.of(page - 1, size, order, field)
-
-    fun updateRequest(orders: List<Sort.Order>) {
-        val sort = Sort.by(orders)
-        pageable = PageRequest.of(page - 1, size, sort)
-    }
 }
