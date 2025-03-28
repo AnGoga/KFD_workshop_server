@@ -6,12 +6,7 @@ import com.angoga.kfd_workshop_server.model.response.PublicationResponse
 import com.angoga.kfd_workshop_server.model.response.common.PageResponse
 import com.angoga.kfd_workshop_server.service.PublicationService
 import com.angoga.kfd_workshop_server.util.API_VERSION_1
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestParam
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("$API_VERSION_1/publication")
@@ -35,7 +30,7 @@ class PublicationController(
     }
 
     @PostMapping
-    fun createPublication(request: PublicationRequest): PublicationResponse {
+    fun createPublication(@RequestBody request: PublicationRequest): PublicationResponse {
         return service.createPublication(request)
     }
 }
